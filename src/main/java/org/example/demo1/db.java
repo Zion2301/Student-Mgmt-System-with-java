@@ -1,11 +1,10 @@
 package org.example.demo1;
 
 import java.sql.Connection;
-import java.sql.Driver;
 import java.sql.DriverManager;
 
 public class db {
-    public static Connection connectdb(){
+    public static void connectdb(){
 
         try{
             Class.forName("com.postgres.jdbc.Driver");
@@ -13,5 +12,6 @@ public class db {
         } catch(Exception e){
             e.printStackTrace();
         }
+        return;
     }
 }

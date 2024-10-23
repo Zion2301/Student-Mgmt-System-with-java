@@ -2,11 +2,8 @@ package org.example.demo1;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.w3c.dom.events.MouseEvent;
-
 
 import java.io.IOException;
 
@@ -16,10 +13,8 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
-
-
-
         stage.setScene(scene);
+        stage.setFullScreen(true);  // Set the stage to full screen
         stage.show();
     }
 
