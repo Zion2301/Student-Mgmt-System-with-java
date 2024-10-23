@@ -1,0 +1,48 @@
+.left-form {
+  -fx-background-color: linear-gradient(to bottom right, #1f49d1, #df3737);
+  -fx-border-color: #000;
+  -fx-border-width: .4px 0px .4px .4px;
+}
+
+.right-text {
+    -fx-text-fill: #212ad1;
+}
+
+.right-form {
+  -fx-background-color: #fff;
+  -fx-border-color: #000;
+  -fx-border-width: .4px .4px .4px 0px;
+}
+
+.font {
+  -fx-text-fill: white;
+}
+
+.left-text {
+   -fx-text-fill: white;
+}
+
+.textfield {
+   -fx-background-color: linear-gradient(to bottom, #efefef, #eee);
+   -fx-border-color: #000;
+   -fx-border-width: .2px;
+   -fx-font-size: 13px;
+   -fx-font-family: "Tahoma";
+   -fx-background-radius: 5px;
+   -fx-border-radius: 5px;
+}
+
+.textfield:focused{
+   -fx-background-color: #fff;
+   -fx-border-width: .9px;
+    -fx-border-color: linear-gradient(to bottom right, #1f49d1, #df3737)
+}
+
+.login-btn {
+  -fx-background-color: linear-gradient(to bottom, #2968a7, #14405d);
+  -fx-cursor: hand;
+  -fx-text-fill: #fff;
+  -fx-font-size: 14px;
+  -fx-font-family: "Tahoma";
+  -fx-background-radius: 4px;
+}
