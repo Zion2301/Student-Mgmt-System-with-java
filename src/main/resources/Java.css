@@ -42,3 +42,42 @@
    -fx-border-color: black;
    -fx-border-radius: 8px;
 }
+
+.search {
+  -fx-background-color: transparent;
+  -fx-border-color: linear-gradient(to bottom right, grey, #b10e0e);
+  -fx-border-width: .8px;
+  -fx-border-radius:8px;
+  -fx-font-family: "Tahoma";
+  -fx-font-size: 14px;
+  -fx-padding: 0px 0px 0px 26px
+}
+
+.search:focused{
+    -fx-border-width: 1.8px;
+    -fx-border-color: linear-gradient(to bottom right, grey, #b10e0e);
+}
+
+.table{
+  -fx-background-color: transparent;
+  -fx-padding: 0px;
+  -fx-border-color: linear-gradient(to bottom right, grey, #b10e0e);
+  -fx-border-width: 2px;
+  -fx-border-radius: 8px;
+}
+
+.table-view .column-header-background{
+   -fx-background-color: linear-gradient(to bottom right, grey, #b10e0e);
+   -fc-border-radius: 8px 8px 0px 0px;
+   -fx-background-inset: 0 0 0 0;
+}
+
+.table-view .column-header, .filter {
+    -fx-background-color: transparent;
+    -fx-size: 40px;
+}
+
+.table-view .column-header .label {
+     -fx-text-fill: #fff;
+     -fx-font-family: "Arial";
+}
