@@ -81,3 +81,68 @@
      -fx-text-fill: #fff;
      -fx-font-family: "Arial";
 }
+
+.inputfield {
+   -fx-background-color: linaera-gradient(to bottom, #efefef, #eee);
+   -fx-background-radius: 4px;
+   -fx-border-color: linear-gradient(to bottom right, grey, #b10e0e);
+   -fx-border-width: .8px
+   -fx-font-family: "Tahoma";
+}
+
+.inputfield:focused{
+    -fx-border-color: linear-gradient(to bottom right, grey, #b10e0e);
+}
+
+.add {
+   -fx-background-color: #2d5278;
+   -fx-background-radius: 8px;
+   -fx-cursor: hand;
+   -fx-text-fill: white;
+   -fx-font-size: 14px;
+   -fx-font-family: "Arial";
+   -fx-transition: 0.3s;
+}
+
+.add:hover {
+   -fx-background-color: #0d21ff;
+}
+
+.delete {
+   -fx-background-color: #993232;
+      -fx-background-radius: 8px;
+      -fx-cursor: hand;
+      -fx-text-fill: white;
+      -fx-font-size: 14px;
+      -fx-font-family: "Arial";
+}
+
+.delete:hover {
+    -fx-background-color: #ff0909;
+}
+
+.update {
+    -fx-background-color: #34d159;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+}
+
+.update:hover {
+       -fx-background-color: #0cf241;
+}
+
+.clear {
+   -fx-background-color: #712476;
+       -fx-background-radius: 8px;
+       -fx-cursor: hand;
+       -fx-text-fill: white;
+       -fx-font-size: 14px;
+       -fx-font-family: "Arial";
+}
+
+.clear:hover {
+    -fx-background-color: #eb18fa;
+}
