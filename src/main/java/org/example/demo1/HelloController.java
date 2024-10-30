@@ -131,7 +131,7 @@ public class HelloController implements Initializable {
         largetable.getSelectionModel().selectedItemProperty().addListener((obs, oldselection, newselection) -> {
             if (newselection != null){
                 selectedStudent = newselection;
-                loadDetails(selectedStudent);
+                loadStudentDetails(selectedStudent);
             }
         });
     }
