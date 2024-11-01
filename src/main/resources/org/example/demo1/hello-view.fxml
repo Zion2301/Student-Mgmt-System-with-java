@@ -267,16 +267,14 @@
                                     </Label>
                                     <ComboBox fx:id="genderchoose" layoutX="778.0" layoutY="539.0" prefWidth="150.0" promptText="Choose" styleClass="inputfield" stylesheets="@../../../Java.css" />
                                     <DatePicker fx:id="datefield" layoutX="75.0" layoutY="541.0" styleClass="inputfield" stylesheets="@../../../Java.css" />
-                                    <Button fx:id="add" layoutX="639.0" layoutY="594.0" mnemonicParsing="false" onAction="#addStudents" prefHeight="38.0" prefWidth="83.0" styleClass="add" stylesheets="@../../../Java.css" text="Add" textFill="#0d21ff" />
-                                    <Button layoutX="736.0" layoutY="594.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="83.0" styleClass="delete" stylesheets="@../../../Java.css" text="Delete" textFill="#ff0909" />
-                                    <Button layoutX="853.0" layoutY="594.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="83.0" styleClass="clear" stylesheets="@../../../Java.css" text="Clear" textFill="#eb18fa" />
+                                    <Button fx:id="add" layoutX="844.0" layoutY="594.0" mnemonicParsing="false" onAction="#addStudents" prefHeight="38.0" prefWidth="83.0" styleClass="add" stylesheets="@../../../Java.css" text="Add" textFill="#0d21ff" />
                                     <Button layoutX="948.0" layoutY="594.0" mnemonicParsing="false" onAction="#updateStudent" prefHeight="38.0" prefWidth="83.0" styleClass="update" stylesheets="@../../../Java.css" text="Update" textFill="#0cf241" />
                                  </children>
                               </AnchorPane>
                               <AnchorPane layoutX="24.0" layoutY="24.0" prefHeight="370.0" prefWidth="1042.0" styleClass="chart-shi" stylesheets="@../../../Java.css">
                                  <children>
-                                    <TextField layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="364.0" promptText="Search" styleClass="search" stylesheets="@../../../Java.css" />
-                                    <TableView fx:id="largetable" layoutX="16.0" layoutY="108.0" prefHeight="254.0" prefWidth="1013.0" styleClass="table" stylesheets="@../../../Java.css">
+                                    <TextField fx:id="searchshi" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="364.0" promptText="Search" styleClass="search" stylesheets="@../../../Java.css" />
+                                    <TableView fx:id="largetable" layoutX="16.0" layoutY="56.0" prefHeight="306.0" prefWidth="1014.0" styleClass="table" stylesheets="@../../../Java.css">
                                       <columns>
                                         <TableColumn fx:id="StudentNameColumn" prefWidth="161.60001373291016" text="StudentName" />
                                         <TableColumn fx:id="CourseColumn" minWidth="0.0" prefWidth="95.199951171875" text="Course" />
@@ -350,6 +348,7 @@
                                           <Font name="Tahoma" size="16.0" />
                                        </font>
                                     </Label>
+                                    <ComboBox layoutX="79.0" layoutY="113.0" prefWidth="150.0" promptText="Choose" styleClass="inputfield" stylesheets="@../../../Java.css" />
                                     <Label layoutX="11.0" layoutY="167.0" text="Current:">
                                        <font>
                                           <Font name="Tahoma" size="16.0" />
@@ -380,10 +379,7 @@
                                        </font>
                                     </Label>
                                     <TextField fx:id="StudentGrade_fourthinput" layoutX="78.0" layoutY="368.0" styleClass="inputfield" stylesheets="@../../../Java.css" />
-                                    <Button layoutX="31.0" layoutY="450.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="84.0" styleClass="add" stylesheets="@../../../Java.css" text="Add">
-                                       <graphic>
-                                          <ComboBox prefWidth="150.0" promptText="Choose" styleClass="inputfield" stylesheets="@../../../Java.css" />
-                                       </graphic></Button>
+                                    <Button layoutX="31.0" layoutY="450.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="84.0" styleClass="add" stylesheets="@../../../Java.css" text="Add" />
                                     <Button layoutX="134.0" layoutY="450.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="84.0" styleClass="update" stylesheets="@../../../Java.css" text="Update" />
                                     <Button layoutX="32.0" layoutY="518.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="84.0" styleClass="clear" stylesheets="@../../../Java.css" text="Clear" />
                                     <Button layoutX="134.0" layoutY="518.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="84.0" styleClass="delete" stylesheets="@../../../Java.css" text="Delete" />

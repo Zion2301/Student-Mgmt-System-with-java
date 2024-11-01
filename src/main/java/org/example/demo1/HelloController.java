@@ -11,7 +11,6 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
-
 import java.net.URL;
 import java.sql.*;
 import java.time.LocalDate;
@@ -24,6 +23,9 @@ public class HelloController implements Initializable {
     private Button homebutton;
     @FXML
     private Button studentbutton;
+
+    @FXML
+    private TextField searchshi;
     @FXML
     private Button coursebutton;
     @FXML
@@ -87,6 +89,15 @@ public class HelloController implements Initializable {
     @FXML
     private Label MaleLabel;
 
+    @FXML
+    private ComboBox<String> coursestuff;
+
+    @FXML
+    private TextField description;
+    
+    @FXML ComboBox<String> degree;
+
+
     private int malecount = 0;
     private int femalecount = 0;
 
@@ -129,11 +140,13 @@ public class HelloController implements Initializable {
         setupComboBoxes();
 
         largetable.getSelectionModel().selectedItemProperty().addListener((obs, oldselection, newselection) -> {
-            if (newselection != null){
+            if (newselection != null) {
                 selectedStudent = newselection;
                 loadStudentDetails(selectedStudent);
             }
         });
+
+        searchshi.textProperty().addListener((obs, old, newval)-> filterStudentList(newval));
     }
 
     private void setupComboBoxes() {
@@ -224,7 +237,6 @@ public class HelloController implements Initializable {
     }
 
 
-
     private void loadEnrollmentCharts() {
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASSWORD);
              Statement stmt = conn.createStatement();
@@ -259,7 +271,7 @@ public class HelloController implements Initializable {
         }
     }
 
-    private void updateGenderCount(String gender ,boolean isNew) {
+    private void updateGenderCount(String gender, boolean isNew) {
         if (isNew) {
             if ("Male".equals(gender)) {
                 malecount++;
@@ -348,6 +360,27 @@ public class HelloController implements Initializable {
             return String.format("%.1fk", count / 1_000.0);
         } else {
             return String.valueOf(count);
+        }
+    }
+
+    private void filterStudentList(String searchTerm) {
+        if (searchTerm == null || searchTerm.isEmpty()) {
+            // If search term is empty, show all students
+            largetable.setItems(studentObservableList);
+        } else {
+            // Create a filtered list based on the search term
+            ObservableList<Map<String, String>> filteredList = FXCollections.observableArrayList();
+
+            for (Map<String, String> student : studentObservableList) {
+                String name = student.get("Name").toLowerCase();
+                String course = student.get("Course").toLowerCase();
+
+                // Check if the search term matches the student name or course
+                if (name.contains(searchTerm.toLowerCase()) || course.contains(searchTerm.toLowerCase())) {
+                    filteredList.add(student);
+                }
+            }
+            largetable.setItems(filteredList);
         }
     }
 }
