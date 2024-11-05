@@ -210,7 +210,7 @@
                               </AnchorPane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="studentPane" layoutX="172.0" layoutY="192.0" prefHeight="665.6" prefWidth="1079.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="studentPane" layoutX="172.0" layoutY="192.0" prefHeight="665.6" prefWidth="1079.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="16.0" layoutY="11.0" prefHeight="643.0" prefWidth="1058.0" styleClass="chart-shi" stylesheets="@../../../Java.css">
                                  <children>
@@ -273,7 +273,7 @@
                               </AnchorPane>
                               <AnchorPane layoutX="24.0" layoutY="24.0" prefHeight="370.0" prefWidth="1042.0" styleClass="chart-shi" stylesheets="@../../../Java.css">
                                  <children>
-                                    <TextField fx:id="searchshi" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="364.0" promptText="Search" styleClass="search" stylesheets="@../../../Java.css" />
+                                    <TextField fx:id="searchshi" layoutX="14.0" layoutY="14.0" prefHeight="34.0" prefWidth="364.0" promptText="Search" styleClass="search" stylesheets="@../../../Java.css" />
                                     <TableView fx:id="largetable" layoutX="16.0" layoutY="56.0" prefHeight="306.0" prefWidth="1014.0" styleClass="table" stylesheets="@../../../Java.css">
                                       <columns>
                                         <TableColumn fx:id="StudentNameColumn" prefWidth="161.60001373291016" text="StudentName" />
@@ -301,39 +301,37 @@
                                           <Font size="16.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox layoutX="86.0" layoutY="57.0" prefWidth="150.0" promptText="Choose" styleClass="inputfield" stylesheets="@../../../Java.css" />
+                                    <ComboBox fx:id="coursestuff" layoutX="86.0" layoutY="57.0" prefWidth="150.0" promptText="Choose" styleClass="inputfield" stylesheets="@../../../Java.css" />
                                     <Label layoutX="14.0" layoutY="124.0" text="Description:">
                                        <font>
                                           <Font size="16.0" />
                                        </font>
                                     </Label>
-                                    <TextField layoutX="102.0" layoutY="124.0" styleClass="inputfield" stylesheets="@../../../Java.css" />
+                                    <TextField fx:id="description" layoutX="102.0" layoutY="124.0" styleClass="inputfield" stylesheets="@../../../Java.css" />
                                     <Label layoutX="22.0" layoutY="201.0" text="Degree:">
                                        <font>
                                           <Font size="16.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox layoutX="98.0" layoutY="200.0" prefWidth="150.0" promptText="Choose" styleClass="inputfield" stylesheets="@../../../Java.css" />
-                                    <Button layoutX="30.0" layoutY="287.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="91.0" styleClass="add" stylesheets="@../../../Java.css" text="Add" />
-                                    <Button layoutX="156.0" layoutY="287.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="91.0" styleClass="update" stylesheets="@../../../Java.css" text="Update" />
-                                    <Button layoutX="31.0" layoutY="369.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="91.0" styleClass="clear" stylesheets="@../../../Java.css" text="Clear" />
-                                    <Button layoutX="156.0" layoutY="369.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="91.0" styleClass="delete" stylesheets="@../../../Java.css" text="Delete" />
+                                    <Button layoutX="30.0" layoutY="287.0" mnemonicParsing="false" onAction="#addCourseStudents" prefHeight="50.0" prefWidth="91.0" styleClass="add" stylesheets="@../../../Java.css" text="Add" />
+                                    <Button layoutX="156.0" layoutY="287.0" mnemonicParsing="false" onAction="#updateCourse" prefHeight="50.0" prefWidth="91.0" styleClass="update" stylesheets="@../../../Java.css" text="Update" />
+                                    <ComboBox fx:id="degree" layoutX="98.0" layoutY="198.0" prefWidth="150.0" promptText="Choose" styleClass="inputfield" stylesheets="@../../../Java.css" />
                                  </children>
                               </AnchorPane>
                               <AnchorPane layoutX="289.0" layoutY="14.0" prefHeight="640.0" prefWidth="779.0" styleClass="chart-shi" stylesheets="@../../../Java.css">
                                  <children>
-                                    <TableView layoutX="6.0" layoutY="8.0" prefHeight="625.0" prefWidth="766.0">
+                                    <TableView fx:id="coursetable" layoutX="6.0" layoutY="8.0" prefHeight="625.0" prefWidth="766.0">
                                       <columns>
-                                        <TableColumn prefWidth="154.4000244140625" text="Course" />
-                                        <TableColumn prefWidth="240.79995727539062" text="Description(Language currently learning)" />
-                                          <TableColumn prefWidth="370.4" text="Degree" />
+                                        <TableColumn fx:id="coursecolumn" prefWidth="154.4000244140625" text="Course" />
+                                        <TableColumn fx:id="descriptioncolumn" prefWidth="240.79995727539062" text="Description(Language currently learning)" />
+                                          <TableColumn fx:id="degreecolumn" prefWidth="370.4" text="Degree" />
                                       </columns>
                                     </TableView>
                                  </children>
                               </AnchorPane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="gradePane" layoutX="165.0" layoutY="142.0" prefHeight="665.6" prefWidth="1079.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="gradePane" layoutX="165.0" layoutY="142.0" prefHeight="665.6" prefWidth="1079.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="639.0" prefWidth="267.0" styleClass="chart-shi" stylesheets="@../../../Java.css">
                                  <children>
@@ -348,7 +346,7 @@
                                           <Font name="Tahoma" size="16.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox layoutX="79.0" layoutY="113.0" prefWidth="150.0" promptText="Choose" styleClass="inputfield" stylesheets="@../../../Java.css" />
+                                    <ComboBox fx:id="StudentGrade_courseinput" layoutX="79.0" layoutY="113.0" prefWidth="150.0" promptText="Choose" styleClass="inputfield" stylesheets="@../../../Java.css" />
                                     <Label layoutX="11.0" layoutY="167.0" text="Current:">
                                        <font>
                                           <Font name="Tahoma" size="16.0" />
@@ -379,10 +377,8 @@
                                        </font>
                                     </Label>
                                     <TextField fx:id="StudentGrade_fourthinput" layoutX="78.0" layoutY="368.0" styleClass="inputfield" stylesheets="@../../../Java.css" />
-                                    <Button layoutX="31.0" layoutY="450.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="84.0" styleClass="add" stylesheets="@../../../Java.css" text="Add" />
-                                    <Button layoutX="134.0" layoutY="450.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="84.0" styleClass="update" stylesheets="@../../../Java.css" text="Update" />
-                                    <Button layoutX="32.0" layoutY="518.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="84.0" styleClass="clear" stylesheets="@../../../Java.css" text="Clear" />
-                                    <Button layoutX="134.0" layoutY="518.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="84.0" styleClass="delete" stylesheets="@../../../Java.css" text="Delete" />
+                                    <Button layoutX="31.0" layoutY="450.0" mnemonicParsing="false" onAction="#addGrades" prefHeight="43.0" prefWidth="84.0" styleClass="add" stylesheets="@../../../Java.css" text="Add" />
+                                    <Button layoutX="134.0" layoutY="450.0" mnemonicParsing="false" onAction="#updateGrade" prefHeight="43.0" prefWidth="84.0" styleClass="update" stylesheets="@../../../Java.css" text="Update" />
                                  </children>
                               </AnchorPane>
                               <AnchorPane layoutX="292.0" layoutY="13.0" prefHeight="639.0" prefWidth="778.0" styleClass="chart-shi" stylesheets="@../../../Java.css">
